@@ -1,0 +1,19 @@
+/* login.css */
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+}
+
+/* Logo styles */
+.logo img {
+    height: 55px;
+}
+
+/* User icon styles */
+.user-icon img {
+    height: 50px;
+}
