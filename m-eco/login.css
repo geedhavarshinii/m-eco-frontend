@@ -1,0 +1,96 @@
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+}
+
+/* Logo styles */
+.logo img {
+    height: 55px;
+}
+
+/* User icon styles */
+.user-icon img {
+    height: 50px;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #444;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #e91e63;
+}
+
+/* Dropdown styles */
+nav .relative {
+    position: relative;
+}
+
+nav .absolute {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 10;
+}
+
+nav .absolute a {
+    display: block;
+    padding: 10px;
+    font-size: 12px;
+    color: #827575;
+    text-decoration: none;
+}
+
+nav .absolute a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Adjust the Services button */
+nav #services-button {
+    font-size: 14px;
+    text-decoration: none;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav #services-button:hover {
+    color: #e91e63;
+}
+
+nav #services-button svg {
+    transition: transform 0.3s ease;
+}
+
+nav #services-button:hover svg {
+    transform: rotate(180deg);
+}
+
+nav #services-dropdown {
+    display: none;
+}
+
+nav .relative:hover #services-dropdown {
+    display: block;
+}
