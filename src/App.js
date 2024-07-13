@@ -8,6 +8,7 @@ import RentItHome from './components/RentItHome';
 import RentItItem from './components/RentItItem';
 import DonateIt from './components/DonateIt';
 import NotFound from './components/NotFound';
+import ThriftItHome from './components/ThriftItHome';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/rentititem" element={<RentItItem />} />
         <Route path="/greenrewards" element={<GreenRewards />} />
         <Route path="/donateit" element={<DonateIt />} />
+        <Route path="/thriftithome" element={<ThriftItHome />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

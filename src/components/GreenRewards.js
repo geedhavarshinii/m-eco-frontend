@@ -13,18 +13,18 @@ const GreenRewards = () => {
       <Navbar />
       <main className="py-8">
         <section className="text-center">
-          <h1 className="text-pinkone text-2xl font-bold mb-2 font-robocon">
+          <h1 className="text-pinkone text-4xl font-bold mb-2 font-robotocon">
             GREEN REWARDS{" "}
-            <span className="text-greenone text-2xl font-bold font-robotocon">PROGRAM</span>{" "}
+            <span className="text-greenone text-4xl font-bold font-robotocon">PROGRAM</span>{" "}
           </h1>
           <div className="flex flex-row justify-between m-28 items-center mt-24 font-krub">
             <div className="bg-greenone bg-opacity-60 rounded-lg shadow-md h-auto w-5/12">
               <p className="text-white text-4xl font-semibold mt-10 m-5 p-10">
                 sometimes, what you sow, is not what you reap – because
                 sometimes, you reap{"  "}
-                <span className="text-red-500 italic">a little more</span>
+                <span className="text-pinkone italic">a little more</span>
               </p>
-              <p className="text-gray-600 mt-8 m-7">
+              <p className="text-white font-semibold mt-8 m-7">
                 with green rewards program, every green choice of yours is
                 appreciated.
               </p>
