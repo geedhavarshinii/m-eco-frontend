@@ -1,6 +1,8 @@
+// productcardforrent.js
+
 import React from 'react';
 
-function RentItItem({ product }) {
+function ProductCardForRent({ product }) {
   return (
     <div className="border p-4 rounded-lg shadow-md bg-greenone bg-opacity-20 hover:bg-pink-100 transition duration-200 ease-in-out h-200 w-100 flex flex-col justify-between">
       <div className="h-80 w-full mb-4 rounded-lg flex items-center justify-center bg-gray-100">
@@ -8,8 +10,8 @@ function RentItItem({ product }) {
       </div>
       <div className="text-center text-xl font-bold truncate">{product.name}</div>
       <div className="text-center text-gray-600 truncate">{product.description}</div>
-      <div className="text-center text-lg font-semibold mt-2">RENT: ₹{product.price} PER DAY</div>
-      <div className="text-center text-gray-500 font-semibold">RENT ₹{product.mrp} PER WEEK</div>
+      <div className="text-center text-lg font-semibold mt-2">₹{product.price}</div>
+      <div className="text-center text-gray-500 font-semibold">BOUGHT FOR ₹{product.mrp}</div>
       <div className="text-center mt-2 flex justify-center items-center">
         <div className="flex items-center">
           <span className="text-yellow-500 mr-2">★</span>
@@ -21,4 +23,4 @@ function RentItItem({ product }) {
   );
 }
 
-export default RentItItem;
+export default ProductCardForRent;

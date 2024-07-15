@@ -7,16 +7,17 @@ import {
   Navigate,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Signup from "./components/Signup";
 import Login from "./components/Login";
 import GreenRewards from "./components/GreenRewards";
 import RentItHome from "./components/RentItHome";
 import RentItItem from "./components/RentItItem";
+import RentItProduct from "./components/RentItProduct";
 import DonateIt from "./components/DonateIt";
 import NotFound from "./components/NotFound";
 import ThriftItHome from "./components/ThriftItHome";
 import ThriftItProduct from "./components/ThriftItProduct";
 import DashBoard from "./components/DashBoard";
+
 
 function App() {
   
@@ -31,17 +32,16 @@ function App() {
       <Navbar />
       <div className="pt-20">
       <Routes>
-        <Route path="/" exact element={<Navigate to="/thriftithome" />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/" exact element={<Navigate to="/rentithome" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/rentithome" element={<RentItHome />} />
         <Route path="/rentititem" element={<RentItItem />} />
+        <Route path="/rent-it-product/:id" element={<RentItProduct/>}/>
         <Route path="/greenrewards" element={<GreenRewards data={data}/>} />
         <Route path="/donateit" element={<DonateIt />} />
         <Route path="/thriftithome" element={<ThriftItHome />} />
         <Route path="/product/:id" element={<ThriftItProduct />} />
         <Route path="/dashboard" element={<DashBoard />} />{" "}
-        {/* Add Route for DashBoard */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       </div>

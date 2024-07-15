@@ -29,9 +29,9 @@ const DonateIt = () => {
     <div className="bg-white min-h-screen">
       <main className="py-8">
         <section className="text-center">
-          <h1 className="text-pinkone text-4xl font-bold mb-2 font-robotocon">
+          <h1 className="text-pinkone text-6xl font-bold mb-2 font-robotocon">
             DONATE{" "}
-            <span className="text-greenone text-4xl font-bold font-robotocon">
+            <span className="text-greenone text-6xl font-bold font-robotocon">
               IT
             </span>{" "}
           </h1>

@@ -27,10 +27,10 @@ const Login = () => {
 
     return (
         <div className="bg-gradient-to-br from-pink-200 to-white min-h-screen">
-            <header className="flex justify-start items-center p-4 bg-white shadow"> 
+            {/* <header className="flex justify-start items-center p-4 bg-white shadow"> 
                 <img src={Logo} alt="Logo" className="h-12" /> 
-            </header>
-            <main className="min-h-screen flex items-start justify-center py-6"> {/* Changed items-center to items-start */}
+            </header> */}
+            <main className="min-h-screen flex items-start pt-40 justify-center py-6"> {/* Changed items-center to items-start */}
                 <div className="w-full max-w-sm bg-white p-6 rounded-lg shadow-lg mt-6"> {/* Added mt-6 */}
                     {showOTPPage ? (
                         <OTPPage username={username} phoneNumber={phoneNumber} />
