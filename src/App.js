@@ -32,7 +32,7 @@ function App() {
       <Navbar />
       <div className="pt-20">
       <Routes>
-        <Route path="/" exact element={<Navigate to="/rentithome" />} />
+        <Route path="/" exact element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/rentithome" element={<RentItHome />} />
         <Route path="/rentititem" element={<RentItItem />} />

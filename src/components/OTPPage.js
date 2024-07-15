@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const OTPPage = ({ username, phoneNumber }) => {
     const [otp, setOTP] = useState(['', '', '', '']); // Array to store OTP digits
@@ -71,7 +72,7 @@ const OTPPage = ({ username, phoneNumber }) => {
                             ))}
                         </div>
                         <button type="submit" className="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600">
-                            Verify OTP
+                            <Link to="/dashboard">Verify OTP</Link>
                         </button>
                         <p className="text-xs text-gray-500 text-center">
                             {timer > 0 ? `Resend OTP in ${timer} seconds` : 'Did not receive OTP? '}

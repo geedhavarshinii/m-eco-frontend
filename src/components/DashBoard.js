@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import Navbar from './Navbar';
+import { Link } from 'react-router-dom';
 import './DashBoard.css';
 import dashboard_img1 from '../img/dashboard_img1.png';
 import dashboard_img2 from '../img/dashboard_img2.png';
@@ -53,21 +54,27 @@ const DashBoard = () => {
                         </button>
                     </div>
                 
-                    <div className="carousel-container relative mt-4">
+                    <div className="carousel-container relative mt-4 mb-28">
                         <div className="carousel flex justify-center overflow-x-scroll scrollbar-hide relative">
                             {/* Slider content */}
+                            <Link to="/thriftithome">
                             <div className="card bg-greenone bg-opacity-60 rounded-lg p-10 m-4 flex-shrink-0 w-96 h-96 flex items-center justify-center green-shadow">
                                 <img src={thriftclothes_img} alt="Thrift Clothes" className="carousel-img"/>
                                 <p className="carousel-label">Thrift Clothes</p>
                             </div>
+                            </Link>
+                            <Link to="/rentithome">
                             <div className="card bg-white rounded-lg p-10 m-4 flex-shrink-0 w-96 h-96 flex items-center justify-center green-shadow">
                                 <img src={rentclothes_img} alt="Rent Clothes" className="carousel-img" />
                                 <p className="carousel-label">Rent Clothes</p>
                             </div>
+                            </Link>
+                            <Link to="/greenrewards">
                             <div className="card bg-white rounded-lg p-10 m-4 flex-shrink-0 w-96 h-96 flex items-center justify-center green-shadow">
                                 <img src={greenrewards_img} alt="Green Rewards Profile" className="carousel-img" />
                                 <p className="carousel-label">Green Rewards</p>
                             </div>
+                            </Link>
                         </div>
                     </div>
                 </main>
