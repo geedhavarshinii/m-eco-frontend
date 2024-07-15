@@ -1,27 +1,76 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import Navbar from './Navbar';
+import './DashBoard.css';
+import dashboard_img1 from '../img/dashboard_img1.png';
+import dashboard_img2 from '../img/dashboard_img2.png';
+import dashboard_img3 from '../img/dashboard_img3.png';
+import thriftclothes_img from '../img/thriftclothes_img.png';
+import rentclothes_img from '../img/rentclothes_img.png';
+import greenrewards_img from '../img/greenrewards_img.png';
 
 const DashBoard = () => {
+    const scrollableRef = useRef(null);
+
+    // Function to scroll content left
+    const scrollLeft = () => {
+        if (scrollableRef.current) {
+            scrollableRef.current.scrollTo({
+                left: scrollableRef.current.scrollLeft - scrollableRef.current.clientWidth,
+                behavior: 'smooth',
+            });
+        }
+    };
+
+    // Function to scroll content right
+    const scrollRight = () => {
+        if (scrollableRef.current) {
+            scrollableRef.current.scrollTo({
+                left: scrollableRef.current.scrollLeft + scrollableRef.current.clientWidth,
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
-        <div className="bg-gray-100 min-h-screen">
-            <main className="mt-24 p-4">
-                <div className="scrollable-element bg-gray-200 p-60 mb-4">
-                    <p>Scrollable content goes here. You can add more text or elements to make it scrollable.</p>
-                </div>
-            </main>
-            <div className="carousel-container relative">
-                <div className="carousel flex justify-center overflow-hidden relative">
-                    <div className="card bg-white rounded-lg shadow-md p-10 m-4 flex-shrink-0 w-80 h-80 flex items-center justify-center">
-                        <p className="text-center font-semibold">THRIFT CLOTHES</p>
+        <div className="bg-white min-h-screen font-krub">
+            <Navbar />
+            <div className="dashboard-content mt-16">
+                <main className="p-3 relative z-0">
+                    <div className="scroll-btn-container">
+                        <button onClick={scrollLeft} className="scroll-btn left-2">
+                            &lt;
+                        </button>
+                        <div ref={scrollableRef} className="scrollable-element px-4 py-10 mb-4 mx-auto w-full overflow-hidden relative">
+                            {/* Scrollable content */}
+                            <div className="scrollable-images flex">
+                                <img src={dashboard_img1} alt="Dashboard Image 1" className="dashboard-img" />
+                                <img src={dashboard_img2} alt="Dashboard Image 2" className="dashboard-img" />
+                                <img src={dashboard_img3} alt="Dashboard Image 3" className="dashboard-img" />
+                            </div>
+                        </div>
+                        <button onClick={scrollRight} className="scroll-btn right-2">
+                            &gt;
+                        </button>
                     </div>
-                    <div className="card bg-white rounded-lg shadow-md p-10 m-4 flex-shrink-0 w-80 h-80 flex items-center justify-center">
-                        <p className="text-center font-semibold">RENT CLOTHES</p>
+                
+                    <div className="carousel-container relative mt-4">
+                        <div className="carousel flex justify-center overflow-x-scroll scrollbar-hide relative">
+                            {/* Slider content */}
+                            <div className="card bg-greenone bg-opacity-60 rounded-lg p-10 m-4 flex-shrink-0 w-96 h-96 flex items-center justify-center green-shadow">
+                                <img src={thriftclothes_img} alt="Thrift Clothes" className="carousel-img"/>
+                                <p className="carousel-label">Thrift Clothes</p>
+                            </div>
+                            <div className="card bg-white rounded-lg p-10 m-4 flex-shrink-0 w-96 h-96 flex items-center justify-center green-shadow">
+                                <img src={rentclothes_img} alt="Rent Clothes" className="carousel-img" />
+                                <p className="carousel-label">Rent Clothes</p>
+                            </div>
+                            <div className="card bg-white rounded-lg p-10 m-4 flex-shrink-0 w-96 h-96 flex items-center justify-center green-shadow">
+                                <img src={greenrewards_img} alt="Green Rewards Profile" className="carousel-img" />
+                                <p className="carousel-label">Green Rewards</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="card bg-white rounded-lg shadow-md p-10 m-4 flex-shrink-0 w-80 h-80 flex items-center justify-center">
-                        <p className="text-center font-semibold">GREEN REWARDS PROFILE</p>
-                    </div>
-                </div>
-                <button id="prev" className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full hover:bg-gray-300">&#8249;</button>
-                <button id="next" className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full hover:bg-gray-300">&#8250;</button>
+                </main>
             </div>
         </div>
     );

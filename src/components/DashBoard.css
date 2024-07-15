@@ -1,0 +1,200 @@
+/* Navbar styles */
+.navbar {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+
+/* Dropdown list styles */
+.dropdown-list {
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+    width: 12rem;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+}
+
+.dropdown-list li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.dropdown-list li:hover {
+    background-color: #F3F4F6;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Styles for the carousel container */
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the carousel items */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Card styles */
+.card, .box {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    margin: 1rem;
+    flex-shrink: 0;
+    width: 24rem;
+    height: 24rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+}
+
+.box {
+    width: 16rem;
+    height: 16rem;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 1rem;
+    margin-top: 4rem; /* Adjusted to create space for the fixed navbar */
+}
+
+/* Scrollable element styles */
+.scrollable-element {
+    padding: 0rem; /* Remove padding for better alignment */
+    margin-bottom: 1rem;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    white-space: nowrap; /* Prevents wrapping of content */
+    position: relative; /* Ensure buttons are positioned correctly */
+    z-index: 1; /* Lower z-index to ensure dropdown is above */
+    width: 100%; /* Set width to 100% */
+    max-width: 3000px; /* Maximum width of the container */
+    margin-top: -5rem; /* Move the container images slightly to the top */
+}
+
+/* Dashboard content */
+.dashboard-content {
+    margin-top: 0; /* Remove margin-top */
+}
+
+.dashboard-img {
+    width: 700px; /* Set width to 100% to fill the container */
+    height: 600px; /* Maintain aspect ratio */
+    object-fit: contain; /* Contain the image within the container */
+}
+
+/* Scroll buttons container */
+.scroll-btn-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between buttons */
+    width: 100%; /* Set width to 100% */
+}
+
+/* Scroll buttons styles */
+.scroll-btn {
+    color: black;
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+}
+
+//* Book Now button styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    position: absolute; /* Position buttons absolutely */
+    bottom: 4rem; /* Adjusted to move buttons to the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering */
+    width: 100%; /* Ensure the container spans the full width */
+}
+
+.book-now-btn {
+    background: #ff3e6c ;
+    border: 2px solid #ff3e6c; /* Changed to pink */
+    color: white; /* Changed to pink */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* .book-now-btn:hover {
+    background: #ff3e6c; /* Changed to pink */
+    /*color: white;
+} 
+
+
+/* Styles for the carousel items */
+/* Styles for the carousel items */
+.carousel .card {
+    background-color: rgba(153, 187, 96, 0.6);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin: 0.8rem;
+    flex-shrink: 0;
+    width: 25rem; /* Adjusted width */
+    height: 20rem; /* Adjusted height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 3rem;
+    position: relative; /* Ensure positioning of label */
+}
+
+.carousel .card img {
+    width: 700px; /* Ensure the image fills the card container */
+    height: 90%; /* Ensure the image fills the card container */
+    object-fit: contain; /* Contain the image within the container */
+}
+
+.carousel .card .carousel-label {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: semi-bold;
+    color: #ff3e6c; /* Pink color */
+    font-size: 1.7rem;
+}
