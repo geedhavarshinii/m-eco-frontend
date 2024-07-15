@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Navbar from './Navbar';
 import userIcon from '../img/user-icon.png';
 import Chat from './Chat';
 
@@ -24,7 +23,6 @@ const ThriftItProduct = () => {
 
   return (
     <div className="ThriftItProduct">
-      <Navbar />
       <main className="pt-4 md:pt-8 bg-greenone bg-opacity-20 min-h-screen flex justify-center items-start">
         <section className="container max-w-4xl bg-white flex flex-col md:flex-row items-start p-8 rounded-lg shadow-lg">
           <div className="md:w-1/2 lg:w-1/3 flex justify-center">

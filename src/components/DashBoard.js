@@ -1,10 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar'; // Adjusted import statement for Navbar
 
 const DashBoard = () => {
     return (
         <div className="bg-gray-100 min-h-screen">
-            <Navbar /> {/* Adjusted component name */}
             <main className="mt-24 p-4">
                 <div className="scrollable-element bg-gray-200 p-60 mb-4">
                     <p>Scrollable content goes here. You can add more text or elements to make it scrollable.</p>

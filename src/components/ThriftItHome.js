@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from "./Navbar";
 import { useNavigate } from 'react-router-dom';
 import ProductCard from './Productcard';
 import product1Image from '../img/111.png';
@@ -155,8 +154,7 @@ const ThriftItHome = () => {
   return (
     <div className="ThriftItHome">
       <div className="bg-white min-h-screen">
-        <Navbar />
-        <main className="py-8">
+        <main className="py-8 mr-16 ml-16 mb-16">
           <section className="text-center">
             <h1 className="text-pinkone text-6xl font-bold mb-2 font-robotocon">
               THRIFT{" "}
